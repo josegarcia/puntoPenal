@@ -10,15 +10,16 @@ get '/' do
 	erb :home
 end
 
-post '/lanzar' do	 
-	#@guess_number = params[:numero]
-	#@pista = @@game.arriesgar(@guess_number)
-	#if( @pista == "X X X X")
-	#	@mensaje = 'Ganaste GENIO'
-	#else
-	#	@mensaje = 'Intentalo de nuevo....'
-	#end
-	#=end
-	@lanzamientosCount = @@game.aumentarContador(  )
+post '/lanzar' do
+	@lanzamiento = params[:some_name] 
+	if( @lanzamiento == "2" )
+		@@game.anotarGol()
+	else
+		@@game.fallarLanzamiento()
+	end
+
+	@goles = @@game.contGol
+	@atajos = @@game.contAtajos
+
 	erb :home
 end

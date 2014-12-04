@@ -11,13 +11,12 @@ Lanzamientos:<%= @lanzamientosCount %> (<%= @pista %>)
     <title>Punto Penal</title>
     <link rel="stylesheet" href="canchaStyle.css" media="screen" title="no title" charset="utf-8">
   </head>
-  <body id="tribuna">
-	Lanzamientos:<%= @lanzamientosCount %> (<%= @pista %>)	
+  <body id="tribuna">	
       <form id="form_id" action="/lanzar" method="post">
-        <input type="submit" name="some_name" class="balon" value="">
-        <input type="submit" name="some_name" class="arquero" value="">
-        <input type="submit" name="some_name" class="tapo" value="">		
+        <input type="submit" name="some_name" class="balon" value="1">
+        <input type="submit" name="some_name" class="arquero" value="2">
+        <input type="submit" name="some_name" class="tapo" value="3">		
       </form>
-      <div id="name" class="grama"></div>
+      <div id="name" class="grama"> 	Goles:<%= @goles %> <br/> Atajadas: <%= @atajos %> </div>
    </body>
 </html>
