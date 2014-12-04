@@ -1,0 +1,38 @@
+form {
+  margin-left: 1%;
+  margin-top: 1%;
+  background: url(http://herrayco.com/adm/imagenSystem/media/1886790539_malla.jpg);
+  width: 950px;
+  height: 400px;
+  border: solid;
+  }
+
+  form input {
+    width: 33%;
+    height: 100%;
+    background: url(http://herrayco.com/adm/imagenSystem/media/1886790539_malla.jpg);
+  }
+
+  .arquero {
+    width: 33%;
+    height: 100%;
+    background: url(http://www.seriousgoalkeeping.net/Techniques/images/ReadyPositions/Ready_Position_4_Wide_Angle.png);
+  }
+
+  .balon {
+    width: 33%;
+    height: 100%;
+    background: url(http://0.static.wix.com/media/265da0_8f4fa6514bad793f98dc9553d27b9841.png_256);
+    background-repeat: no-repeat;
+  }
+
+  .tapo{
+    width: 33%;
+    height: 100%;
+    background-image: url(http://0.static.wix.com/media/265da0_8f4fa6514bad793f98dc9553d27b9841.png_256), url(http://www.seriousgoalkeeping.net/Techniques/images/ReadyPositions/Ready_Position_4_Wide_Angle.png);
+    background-repeat: no-repeat;
+  }
+
+  #tribuna {
+    background: url(http://i.imgur.com/YCemQ.jpg);
+  }
