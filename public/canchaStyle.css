@@ -9,27 +9,24 @@ form {
   }
 
   form input {
-    width: 34%;
+    width: 32%;
     height: 100%;
     cursor: url(./balon.cur), pointer;
     background: url(http://herrayco.com/adm/imagenSystem/media/1886790539_malla.jpg);
   }
 
-  .arquero {
-    width: 30%;
+  .arquero {    
     height: 100%;
     background: url(http://www.seriousgoalkeeping.net/Techniques/images/ReadyPositions/Ready_Position_4_Wide_Angle.png);
   }
 
   .balon {
-    width: 30%;
     height: 100%;
     background: url(http://0.static.wix.com/media/265da0_8f4fa6514bad793f98dc9553d27b9841.png_256);
     background-repeat: no-repeat;
   }
 
   .tapo{
-    width: 30%;
     height: 100%;
     background-image: url(http://0.static.wix.com/media/265da0_8f4fa6514bad793f98dc9553d27b9841.png_256), url(http://www.seriousgoalkeeping.net/Techniques/images/ReadyPositions/Ready_Position_4_Wide_Angle.png);
     background-repeat: no-repeat;
