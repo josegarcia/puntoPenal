@@ -8,6 +8,8 @@ configure do
 end
 
 get '/' do
+	@goles = 0
+	@atajos = 0
 	@posicionInicialArquero = 2;
 	@@atajo = @@game.posicionarArquero();
 	@gol = true

@@ -57,7 +57,10 @@ form {
 	position:fixed;
 	left:1300px;
 	font-size:30px;
-	background-color: green;
+	background-color: black;
+	border: 5px solid white;
+	color: white;
+	padding: 10px;
   }
 
   .tapo{
