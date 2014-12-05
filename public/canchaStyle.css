@@ -75,3 +75,8 @@ form {
     margin-bottom: 0px;
 
   }
+
+a span{
+	color:red;
+	font-size:40px;
+}
