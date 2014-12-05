@@ -525,3 +525,7 @@ D, [2014-12-05T17:26:03.490078 #4308] DEBUG -- : REQUESTING PAGE: GET / with {} 
 D, [2014-12-05T17:26:03.541360 #4308] DEBUG -- : REQUESTING PAGE: POST /lanzar with {"some_name"=>"2"} and HTTP headers {"HTTP_REFERER"=>"/"}
 D, [2014-12-05T17:26:03.546603 #4308] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
 D, [2014-12-05T17:26:03.557770 #4308] DEBUG -- : REQUESTING PAGE: POST /lanzar with {"some_name"=>"3"} and HTTP headers {"HTTP_REFERER"=>"/"}
+D, [2014-12-05T17:36:46.358118 #7485] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2014-12-05T17:36:46.405014 #7485] DEBUG -- : REQUESTING PAGE: POST /lanzar with {"some_name"=>"2"} and HTTP headers {"HTTP_REFERER"=>"/"}
+D, [2014-12-05T17:36:46.411286 #7485] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2014-12-05T17:36:46.417797 #7485] DEBUG -- : REQUESTING PAGE: POST /lanzar with {"some_name"=>"3"} and HTTP headers {"HTTP_REFERER"=>"/"}

@@ -24,16 +24,22 @@ Lanzamientos:<%= @lanzamientosCount %> (<%= @pista %>)
 			Goles:<%= @goles %> <br/> 
 			Atajadas: <%= @atajos %> <br/>
 		</div>
+		<% if ( @posicionInicialArquero != 2 )%>		
 		<div class="celebracion">
-			<% if (@gol)%>
+			<% if ( @gol)%>
 				<img src="http://stream1.gifsoup.com/view2/4791079/goal-celebration-fx-gif-o.gif" />
 			<% else %>
 				<img src="http://sillyseason.com/sites/default/files/u3/999757ed89cc885b3f24c362fb3bce92_large.gif" />
 			<% end %>
 		</div>
+		<% end %>
 
       <form id="form_id" action="/lanzar" method="post">
 		<% for i in 1..@@campos do %>
+			<% desabilitado = ""
+			if(!@continuar)
+				desabilitado = "disabled=true"
+			end %>
 			<% 	clase = ""
 				if(!@gol && @lanzamiento == i)
 					clase = "tapo"
@@ -43,9 +49,12 @@ Lanzamientos:<%= @lanzamientosCount %> (<%= @pista %>)
 				end
 			 	if(@gol && @atajo == i)
 					clase = "arquero"
+				end
+			 	if(@posicionInicialArquero == i)
+					clase = "arquero"
 			 	end
 			%>
-        	<input type="submit" name="some_name" class="<%= clase %>" id="<%= i %>"  value="<%= i %>">
+        	<input type="submit" name="some_name" <%= desabilitado %> class="<%= clase %>" id="<%= i %>"  value="<%= i %>">
 		<% end %>	
       </form>
 
