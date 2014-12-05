@@ -28,7 +28,11 @@ post '/lanzar' do
 	erb :home
 end
 
-get '/reiniciar' do
-	@@game.reiniciarMarcador()
+get '/continuar' do
+	@atajo = 2
+	@gol = true
+
+	@goles = @@game.contGol
+	@atajos = @@game.contAtajos
 	erb :home
 end
