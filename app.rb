@@ -13,9 +13,9 @@ get '/' do
 end
 
 post '/lanzar' do
-	@lanzamiento = params[:some_name]
+	@lanzamiento = params[:some_name].to_i
 	@atajo = @@game.posicionarArquero();
-	@gol = @lanzamiento.to_i == @atajo
+	@gol = @lanzamiento != @atajo
 	if(@gol)
 		@@game.anotarGol()
 	else
