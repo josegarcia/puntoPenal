@@ -1,40 +1,14 @@
-Feature: "Jugar al codeBreaker"
+Feature: "Jugar al puntoPenal"
 
-Como nerd 
-quiero ingresar un numero 
-para comenzar a jugar
+Como Jugador
+quiero realizar un lanzamiento 
+para anotar un gol
 
-Scenario Outline: "Primera jugada"
+Scenario Outline: "tiro"
 	Given entro a la aplicacion
-	And el numero secreto es <secret>
-	When intento con <guess>
-	Then debo ver <mensaje>
+	And debo ver la posicion del arquero inicial <posicionArquero>	
 	Scenarios:
-	|secret|guess|mensaje|
-	|"1234"|"1234"|"Ganaste GENIO"|
-	|"1234"|"3456"|"Intentalo de nuevo...."|
-
-Scenario Outline: "Jugar"
-	Given entro a la aplicacion
-	And el numero secreto es <secret>
-	When intento con <guess>
-	Then debo ver <pista>
-	Scenarios:
-	|secret|guess|pista|
-	|"1234"|"5678"|"()"|
-	|"1234"|"1234"|"(X X X X)"|
-	|"1234"|"1598"|"(X)"|
-	|"1234"|"1538"|"(X X)"|
-	|"1234"|"5284"|"(X X)"|
-	|"1234"|"5234"|"(X X X)"|
-	|"1234"|"1235"|"(X X X)"|
-	|"1234"|"5671"|"(_)"|
-	
-Scenario: No Gano
-	Given entro a la aplicacion
-	And el numero secreto es "1234"
-	When intento con "9876"
-	Then no debo ver "Ganaste GENIO"
-	And debo ver "Intentalo de nuevo...."
-
+	|posicionArquero|
+	|1|
+	|2|
 

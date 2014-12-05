@@ -1,4 +1,4 @@
-include "./random_generator"
+
 
 class Game
 
@@ -11,10 +11,6 @@ class Game
 		@contGol = 0
 		@contAtajos = 0
 	end
-	
-	def posicionarArquero()
-		rand(1..3)
-	end
 
 	def anotarGol()
 		 @contGol += 1
@@ -25,7 +21,8 @@ class Game
 	end
 	
 	def posicionarArquero()
-		rand(1..@@campos)
+		@arquero_posicion = rand(1..@@campos)
+		@arquero_posicion
 	end
 
 end
