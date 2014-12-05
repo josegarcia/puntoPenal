@@ -19,7 +19,8 @@ class Game
 	end
 	
 	def posicionarArquero()
-		rand(1..@@campos)
+		@arquero_posicion = rand(1..@@campos)
+		@arquero_posicion
 	end
 
 	def reiniciarMarcador()

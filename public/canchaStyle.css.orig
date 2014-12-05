@@ -1,0 +1,51 @@
+form {
+  margin-left: 18%;
+  margin-top: 13%;
+  margin-bottom: 0px;
+  background: url(http://herrayco.com/adm/imagenSystem/media/1886790539_malla.jpg);
+  width: 950px;
+  height: 400px;
+  border: solid;
+  }
+
+  form input {
+    width: 32%;
+    height: 100%;
+    cursor: url(./balon.cur), pointer;
+    background: url(http://herrayco.com/adm/imagenSystem/media/1886790539_malla.jpg);
+  }
+
+<<<<<<< HEAD
+  .arquero {
+=======
+  .arquero {    
+>>>>>>> 7ee0574d156459b1277a7c1ee21562de83ffe516
+    height: 100%;
+    background: url(http://www.seriousgoalkeeping.net/Techniques/images/ReadyPositions/Ready_Position_4_Wide_Angle.png);
+  }
+
+  .balon {
+    height: 100%;
+    background: url(http://0.static.wix.com/media/265da0_8f4fa6514bad793f98dc9553d27b9841.png_256);
+    background-repeat: no-repeat;
+  }
+
+  .tapo{
+    height: 100%;
+    background-image: url(http://0.static.wix.com/media/265da0_8f4fa6514bad793f98dc9553d27b9841.png_256), url(http://www.seriousgoalkeeping.net/Techniques/images/ReadyPositions/Ready_Position_4_Wide_Angle.png);
+	background-repeat: no-repeat;
+  }
+
+  .grama{
+    background: green;
+    width: 100%;
+    height: 26%;
+  }
+
+  #tribuna {
+    background: url(http://i.imgur.com/YCemQ.jpg);
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+
+  }
