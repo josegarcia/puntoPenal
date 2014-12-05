@@ -12,12 +12,12 @@ form {
     width: 32%;
     height: 100%;
     cursor: url(./balon.cur), pointer;
-    background: url(http://herrayco.com/adm/imagenSystem/media/1886790539_malla.jpg);
+	background: url("path") 89px 78px no-repeat;
   }
 
   .arquero {
     height: 100%;
-    background: url(http://www.seriousgoalkeeping.net/Techniques/images/ReadyPositions/Ready_Position_4_Wide_Angle.png);
+    background: url(http://www.seriousgoalkeeping.net/Techniques/images/ReadyPositions/Ready_Position_4_Wide_Angle.png)50% 18px no-repeat;
   }
 
   .balon {
@@ -58,7 +58,7 @@ form {
 
   .tapo{
     height: 100%;
-    background-image: url(http://0.static.wix.com/media/265da0_8f4fa6514bad793f98dc9553d27b9841.png_256), url(http://www.seriousgoalkeeping.net/Techniques/images/ReadyPositions/Ready_Position_4_Wide_Angle.png);
+    background: url(http://0.static.wix.com/media/265da0_8f4fa6514bad793f98dc9553d27b9841.png_256)50% 18px no-repeat, url(http://www.seriousgoalkeeping.net/Techniques/images/ReadyPositions/Ready_Position_4_Wide_Angle.png)50% 18px no-repeat;
 	background-repeat: no-repeat;
   }
 

@@ -31,6 +31,7 @@ Lanzamientos:<%= @lanzamientosCount %> (<%= @pista %>)
 				<img src="http://sillyseason.com/sites/default/files/u3/999757ed89cc885b3f24c362fb3bce92_large.gif" />
 			<% end %>
 		</div>
+
       <form id="form_id" action="/lanzar" method="post">
 		<% for i in 1..@@campos do %>
 			<% 	clase = ""
@@ -47,6 +48,7 @@ Lanzamientos:<%= @lanzamientosCount %> (<%= @pista %>)
         	<input type="submit" name="some_name" class="<%= clase %>" id="<%= i %>"  value="<%= i %>">
 		<% end %>	
       </form>
+
 	  <% if (@continuar)%>
 		<img class="balon_grama" src="http://2.bp.blogspot.com/-UPBWBYE-Y2o/UQBVGFTLBuI/AAAAAAAAAEY/Tky_VJuKkik/s1600/balon+de+futbol.png" />
 	  <% end %>
