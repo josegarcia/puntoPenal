@@ -8,6 +8,9 @@ configure do
 end
 
 get '/' do
+	@atajo = 2
+	@gol = true
+	@continuar = true
 	@@game.reiniciarMarcador()
 	erb :home
 end
@@ -31,7 +34,8 @@ end
 get '/continuar' do
 	@atajo = 2
 	@gol = true
-
+	
+	@continuar = true
 	@goles = @@game.contGol
 	@atajos = @@game.contAtajos
 	erb :home

@@ -26,6 +26,11 @@ form {
     background-repeat: no-repeat;
   }
 
+  .balon_grama {
+    position:fixed;
+	left:650px;
+  }
+
   .tapo{
     height: 100%;
     background-image: url(http://0.static.wix.com/media/265da0_8f4fa6514bad793f98dc9553d27b9841.png_256), url(http://www.seriousgoalkeeping.net/Techniques/images/ReadyPositions/Ready_Position_4_Wide_Angle.png);

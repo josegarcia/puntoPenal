@@ -26,13 +26,17 @@ Lanzamientos:<%= @lanzamientosCount %> (<%= @pista %>)
 			 	end
 			%>
         	<input type="submit" name="some_name" class="<%= clase %>" value="<%= i %>">
-		<% end %>		
+		<% end %>	
       </form>
+	  <% if (@continuar)%>
+		<img class="balon_grama" src="http://0.static.wix.com/media/265da0_8f4fa6514bad793f98dc9553d27b9841.png_256" />
+	  <% end %>
+	  
       <div id="name" class="grama">
 		<div>
 			Goles:<%= @goles %> <br/> 
 			Atajadas: <%= @atajos %> <br/>
-	        <a href="/">reiniciar </a>
+	        <a href="/">reiniciar </a><br/>
 	        <a href="/continuar">Continuar con el siguiente lanzamiento</a>
 		</div>
 		
