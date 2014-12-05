@@ -25,23 +25,19 @@ Lanzamientos:<%= @lanzamientosCount %> (<%= @pista %>)
 					clase = "arquero"
 			 	end
 			%>
-        	<input type="submit" name="some_name" class="<%= clase %>" value="<%= i %>">
+        	<input type="submit" name="some_name" class="<%= clase %>" id="<%= i %>" value="<%= i %>">
 		<% end %>		
       </form>
       <div id="name" class="grama">
 		<div>
 			Goles:<%= @goles %> <br/> 
 			Atajadas: <%= @atajos %> <br/> 
-			Atajo: <%= @atajo%> <br/> 
+			Atajo: <%= @atajo %> <br/> 
 			Lanzamiento: <%= @lanzamiento%>
 		</div>
 		
 		<div>
-			<% if (@gol)%>
-				<h1>GOOOOLLLL!!!!</h1>
-			<% else %>
-				<h1>QUE BOLUUUDOO !!!!</h1>
-			<% end %>
+			<h1><%= @mensaje  %>			
 		</div>
 	  </div>
    </body>
