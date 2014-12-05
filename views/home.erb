@@ -44,7 +44,7 @@ Lanzamientos:<%= @lanzamientosCount %> (<%= @pista %>)
 					clase = "arquero"
 			 	end
 			%>
-        	<input type="submit" name="some_name" class="<%= clase %>" value="<%= i %>">
+        	<input type="submit" name="some_name" class="<%= clase %>" id="<%= i %>"  value="<%= i %>">
 		<% end %>	
       </form>
 	  <% if (@continuar)%>
@@ -56,11 +56,7 @@ Lanzamientos:<%= @lanzamientosCount %> (<%= @pista %>)
         <a href="/continuar" class="btn btn-default">Continuar con el siguiente lanzamiento</a>
 		<div>
 			<marquee scrollamount="30">
-				<% if (@gol)%>
-					<h1>GOOOOLLLL!!!!</h1>
-				<% else %>
-					<h1>QUE BOLUUUDOO !!!!</h1>
-				<% end %>
+				<h1><%= @mensaje %>
 			</marquee>
 		</div>
 	  </div>

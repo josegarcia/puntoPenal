@@ -8,7 +8,7 @@ configure do
 end
 
 get '/' do
-	@atajo = 2
+	@@atajo = @@game.posicionarArquero();
 	@gol = true
 	@continuar = true
 	@@game.reiniciarMarcador()
@@ -16,18 +16,21 @@ get '/' do
 end
 
 post '/lanzar' do
+	@atajo = @@atajo.to_i
 	@lanzamiento = params[:some_name].to_i
-	@atajo = @@game.posicionarArquero();
+	
 	@gol = @lanzamiento != @atajo
 	if(@gol)
 		@@game.anotarGol()
+		@mensaje = "GOOOOLLLL!!!!"
 	else
 		@@game.fallarLanzamiento()
+		@mensaje = "QUE BOLUUUDOO !!!!"
 	end
 
 	@goles = @@game.contGol
 	@atajos = @@game.contAtajos
-
+	@@atajo = @@game.posicionarArquero();
 	erb :home
 end
 
