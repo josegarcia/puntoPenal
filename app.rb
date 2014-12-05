@@ -8,7 +8,7 @@ configure do
 end
 
 get '/' do
-
+	@@game.reiniciarMarcador()
 	erb :home
 end
 
@@ -25,5 +25,10 @@ post '/lanzar' do
 	@goles = @@game.contGol
 	@atajos = @@game.contAtajos
 
+	erb :home
+end
+
+get '/reiniciar' do
+	@@game.reiniciarMarcador()
 	erb :home
 end
