@@ -33,4 +33,8 @@ describe Game do
 		@juego.contAtajos.should == 1
 	end
 
+	it "al iniciar el juego debe estar en la posicion centro" do 
+		@juego.arquero_posicion.should == 1
+	end
+
 end
