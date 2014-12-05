@@ -34,7 +34,16 @@ describe Game do
 	end
 
 	it "al iniciar el juego debe estar en la posicion centro" do 
-		@juego.arquero_posicion.should == 1
+		@juego.arquero_posicion.should == 2
+	end
+
+	it "si hago 3 goles, y reinicio el marcador, debo tener 0 goles anotados en el marcador " do		
+		@juego.anotarGol()
+		@juego.anotarGol()
+		@juego.anotarGol()
+		@juego.contGol.should == 3
+		@juego.reiniciarMarcador()
+		@juego.contGol.should == 0
 	end
 
 end

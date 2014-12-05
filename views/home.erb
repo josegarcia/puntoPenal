@@ -15,12 +15,15 @@ Lanzamientos:<%= @lanzamientosCount %> (<%= @pista %>)
       <form id="form_id" action="/lanzar" method="post">
 		<% for i in 1..@@campos do %>
 			<% 	clase = ""
-				if(!@gol && @lanzamiento == i.to_s)
+				if(!@gol && @lanzamiento == i)
 					clase = "tapo"
 				end
-				if(@gol && @lanzamiento == i.to_s)
+				if(@gol && @lanzamiento == i)
 					clase = "balon"
-			 	end 
+				end
+			 	if(@gol && @atajo == i)
+					clase = "arquero"
+			 	end
 			%>
         	<input type="submit" name="some_name" class="<%= clase %>" value="<%= i %>">
 		<% end %>		
@@ -28,7 +31,9 @@ Lanzamientos:<%= @lanzamientosCount %> (<%= @pista %>)
       <div id="name" class="grama">
 		<div>
 			Goles:<%= @goles %> <br/> 
-			Atajadas: <%= @atajos %>
+			Atajadas: <%= @atajos %> <br/> 
+			Atajo: <%= @atajo%> <br/> 
+			Lanzamiento: <%= @lanzamiento%>
 		</div>
 		
 		<div>
