@@ -10,8 +10,27 @@ Lanzamientos:<%= @lanzamientosCount %> (<%= @pista %>)
   <head>
     <title>Punto Penal</title>
     <link rel="stylesheet" href="canchaStyle.css" media="screen" title="no title" charset="utf-8">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   </head>
-  <body id="tribuna">	
+  <body id="tribuna">
+		<div id="tablero">
+			Goles:<%= @goles %> <br/> 
+			Atajadas: <%= @atajos %> <br/>
+		</div>
+		<div class="celebracion">
+			<% if (@gol)%>
+				<img src="http://stream1.gifsoup.com/view2/4791079/goal-celebration-fx-gif-o.gif" />
+			<% else %>
+				<img src="http://sillyseason.com/sites/default/files/u3/999757ed89cc885b3f24c362fb3bce92_large.gif" />
+			<% end %>
+		</div>
       <form id="form_id" action="/lanzar" method="post">
 		<% for i in 1..@@campos do %>
 			<% 	clase = ""
@@ -29,23 +48,20 @@ Lanzamientos:<%= @lanzamientosCount %> (<%= @pista %>)
 		<% end %>	
       </form>
 	  <% if (@continuar)%>
-		<img class="balon_grama" src="http://0.static.wix.com/media/265da0_8f4fa6514bad793f98dc9553d27b9841.png_256" />
+		<img class="balon_grama" src="http://2.bp.blogspot.com/-UPBWBYE-Y2o/UQBVGFTLBuI/AAAAAAAAAEY/Tky_VJuKkik/s1600/balon+de+futbol.png" />
 	  <% end %>
-	  
+
       <div id="name" class="grama">
+		<a href="/" class="btn btn-default">reiniciar </a><br/>
+        <a href="/continuar" class="btn btn-default">Continuar con el siguiente lanzamiento</a>
 		<div>
-			Goles:<%= @goles %> <br/> 
-			Atajadas: <%= @atajos %> <br/>
-	        <a href="/">reiniciar </a><br/>
-	        <a href="/continuar">Continuar con el siguiente lanzamiento</a>
-		</div>
-		
-		<div>
-			<% if (@gol)%>
-				<h1>GOOOOLLLL!!!!</h1>
-			<% else %>
-				<h1>QUE BOLUUUDOO !!!!</h1>
-			<% end %>
+			<marquee scrollamount="30">
+				<% if (@gol)%>
+					<h1>GOOOOLLLL!!!!</h1>
+				<% else %>
+					<h1>QUE BOLUUUDOO !!!!</h1>
+				<% end %>
+			</marquee>
 		</div>
 	  </div>
 

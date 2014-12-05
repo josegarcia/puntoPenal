@@ -27,8 +27,33 @@ form {
   }
 
   .balon_grama {
+	height: 120px;
     position:fixed;
-	left:650px;
+	left:850px;
+  }
+
+	marquee h1{
+		color: black;
+		font-size:70px;
+	}
+
+  .celebracion{
+	position:fixed;
+	left:1300px;
+	top: 350px;
+	font-size:30px;
+	background-color: green;
+  }
+	
+  .celebracion img{
+	height: 300px;
+ }
+
+  #tablero{
+	position:fixed;
+	left:1300px;
+	font-size:30px;
+	background-color: green;
   }
 
   .tapo{
