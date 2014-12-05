@@ -16,5 +16,9 @@ class Game
 	def fallarLanzamiento()
 		 @contAtajos += 1
 	end
+	
+	def posicionarArquero()
+		rand(1..@@campos)
+	end
 
 end

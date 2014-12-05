@@ -13,10 +13,31 @@ Lanzamientos:<%= @lanzamientosCount %> (<%= @pista %>)
   </head>
   <body id="tribuna">	
       <form id="form_id" action="/lanzar" method="post">
-        <input type="submit" name="some_name" class="balon" value="1">
-        <input type="submit" name="some_name" class="arquero" value="2">
-        <input type="submit" name="some_name" class="tapo" value="3">		
+		<% for i in 1..@@campos do %>
+			<% 	clase = ""
+				if(!@gol && @lanzamiento == i.to_s)
+					clase = "tapo"
+				end
+				if(@gol && @lanzamiento == i.to_s)
+					clase = "balon"
+			 	end 
+			%>
+        	<input type="submit" name="some_name" class="<%= clase %>" value="<%= i %>">
+		<% end %>		
       </form>
-      <div id="name" class="grama"> 	Goles:<%= @goles %> <br/> Atajadas: <%= @atajos %> </div>
+      <div id="name" class="grama">
+		<div>
+			Goles:<%= @goles %> <br/> 
+			Atajadas: <%= @atajos %>
+		</div>
+		
+		<div>
+			<% if (@gol)%>
+				<h1>GOOOOLLLL!!!!</h1>
+			<% else %>
+				<h1>QUE BOLUUUDOO !!!!</h1>
+			<% end %>
+		</div>
+	  </div>
    </body>
 </html>

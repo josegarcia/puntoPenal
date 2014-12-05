@@ -4,6 +4,7 @@ require './lib/game'
 configure do
 	enable :sessions
 	@@game = Game.new
+	@@campos = 3
 end
 
 get '/' do
@@ -11,8 +12,10 @@ get '/' do
 end
 
 post '/lanzar' do
-	@lanzamiento = params[:some_name] 
-	if( @lanzamiento == "2" )
+	@lanzamiento = params[:some_name]
+	@atajo = @@game.posicionarArquero();
+	@gol = @lanzamiento.to_i == @atajo
+	if(@gol)
 		@@game.anotarGol()
 	else
 		@@game.fallarLanzamiento()
